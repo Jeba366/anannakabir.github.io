@@ -1,19 +1,19 @@
 <?php 
  
 $host="localhost";
-$user="root";
-$password="";
+$Name="root";
+$Password="";
 $db="blogdatabase";
  
 mysql_connect($host,$user,$password);
 mysql_select_db($db);
  
-if(isset($_POST['username'])){
+if(isset($_POST['Name'])){
     
-    $uname=$_POST['username'];
-    $password=$_POST['password'];
+    $uname=$_POST['Name'];
+    $password=$_POST['Password'];
     
-    $sql = "SELECT * ID, User Name,Pass FROM login";
+    $sql = "SELECT * ID,Name,Password FROM login";
 $result = mysqli_query($conn, $sql);
     
     if(mysql_num_rows($result)==1){
